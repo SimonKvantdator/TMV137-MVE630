@@ -1,0 +1,49 @@
+%! TEX root = /home/simon/Documents/komplexanalysrövningsledning/lösningsförslag/main.tex
+
+% Main number systems
+\def\naturals{\mathbb{N}}
+\def\integers{\mathbb{Z}}
+\def\rationals{\mathbb{Q}}
+\def\reals{\mathbb{R}}
+\def\complexes{\mathbb{C}}
+
+% Some shorthands for correct spacing in math environments
+\def\from{\colon} % Proper spacing of colon in f:A -> B
+\newlength\mylen
+\settowidth\mylen{$\longleftrightarrow$}
+\newcommand*{\mapsbetween}{\longleftrightarrow\kern - 0.5\mylen\vline height 1.2ex depth -0.0pt\kern0.5\mylen} % Isomorphic \mapsto
+\def\suchthat{\qq{s.a.}}
+\def\definedas{\coloneqq}
+\def\defines{\eqqcolon}
+\newcommand*{\conjugate}[1]{\mkern 1.0mu\overline{\mkern-1.0mu#1\mkern-1.0mu}\mkern 1.0mu} % Complex conjugate
+\newcommand*{\dual}[1]{{#1}^{*}} % Dual vector space
+
+% Lie-groups & algebras, e.g. SU(n)
+\newcommand*{\algebra}[2]{{\mathfrak{\MakeLowercase{#1}}}{\left(#2\right)}}
+\newcommand*{\group}[2]{{\mathrm{\MakeUppercase{#1}}}{\left(#2\right)}}
+
+% Fundamental operators
+\def\sDiv{\mathscr{D}}
+\def\sTwist{\mathscr{T}}
+\def\sCurl{\mathscr{C}}
+\def\sCurlDagger{\mathscr{C}^\dagger}
+
+% Symmetric multiplication
+\newcommand*{\SymMult}[2]{\overset{#1, #2}{\odot}}
+
+% SymH
+\DeclareMathOperator*{\Sym}{Sym}
+
+\DeclareMathOperator*{\residue}{Res}
+
+% Notation for irreducible parts of symmetry operator coefficients
+\newcommand*{\coeff}[3]{\underset{#2, #3}{#1}{}}
+
+% Redefine \exp
+% Errors occur if this definition is made before some of the packages are loaded
+\let\oldexp\exp
+\newcommand*{\Exp}[1]{\oldexp{#1}}
+\renewcommand{\exp}[1]{\mathrm{e}^{#1}}
+
+\newcommand{\laplacetransform}[1]{\widetilde{#1}}
+\newcommand{\Laplacetransform}[1]{\mathcal{L}\left[{#1}\right]}
