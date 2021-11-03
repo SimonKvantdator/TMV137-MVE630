@@ -105,16 +105,16 @@ Beräkna
 
 \begin{align*}
 	\int_{\sin \theta}^{\cos \theta} \frac{1}{1 - x^2} \dd{x} ={}&
-	\int_{1}^{\cos \theta} \frac{1}{1 - x^2} \dd{x}
-	+ \int_{\sin \theta}^{1} \frac{1}{1 - x^2} \dd{x}\\
+	\int_{0}^{\cos \theta} \frac{1}{1 - x^2} \dd{x}
+	+ \int_{\sin \theta}^{0} \frac{1}{1 - x^2} \dd{x}\\
 	%
-	={}& \int_{1}^{\cos \theta} \frac{1}{1 - x^2} \dd{x}
-	- \int_{1}^{\sin \theta} \frac{1}{1 - x^2} \dd{x}.
+	={}& \int_{0}^{\cos \theta} \frac{1}{1 - x^2} \dd{x}
+	- \int_{0}^{\sin \theta} \frac{1}{1 - x^2} \dd{x}.
 \end{align*}
 Enligt kedjeregeln är
 \begin{align*}
-	\derivative{}{\theta} \int_{1}^{\cos \theta} \frac{1}{1 - x^2} \dd{x} ={}&
-	\derivative{}{\cos \theta} \left(\int_{1}^{\cos \theta} \frac{1}{1 - x^2} \dd{x}\right) \derivative{\cos \theta}{\theta}\\
+	\derivative{}{\theta} \int_{0}^{\cos \theta} \frac{1}{1 - x^2} \dd{x} ={}&
+	\derivative{}{\cos \theta} \left(\int_{0}^{\cos \theta} \frac{1}{1 - x^2} \dd{x}\right) \derivative{\cos \theta}{\theta}\\
 	%
 	={}& -\frac{1}{1 - \cos^2 \theta} \sin \theta\\
 	%
@@ -122,8 +122,8 @@ Enligt kedjeregeln är
 \end{align*}
 och
 \begin{align*}
-	\derivative{}{\theta} \int_{1}^{\sin \theta} \frac{1}{1 - x^2} \dd{x} ={}&
-	\derivative{}{\sin \theta} \left(\int_{1}^{\sin \theta} \frac{1}{1 - x^2} \dd{x}\right) \derivative{\sin \theta}{\theta}\\
+	\derivative{}{\theta} \int_{0}^{\sin \theta} \frac{1}{1 - x^2} \dd{x} ={}&
+	\derivative{}{\sin \theta} \left(\int_{0}^{\sin \theta} \frac{1}{1 - x^2} \dd{x}\right) \derivative{\sin \theta}{\theta}\\
 	%
 	={}& \frac{1}{1 - \sin^2 \theta} \cos \theta\\
 	%
