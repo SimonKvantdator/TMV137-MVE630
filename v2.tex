@@ -1,0 +1,114 @@
+\section{Vecka 45}%
+\label{sec:vecka_45}
+
+
+\subsection{5.6 6}%
+\label{sub:5_6_6}
+
+Evaluera
+\begin{align*}
+	\int \frac{\sin \sqrt{x}}{\sqrt{x}} \dd{x}.
+\end{align*}
+
+\paragraph{Lösning:}
+
+~\todo[inline]{Kolla om någon vet hur man löser den.}\\
+Kedjeregeln ger att
+\begin{align*}
+	\derivative{}{x} \cos \sqrt{x} = -\frac{\sin \sqrt{x}}{2 \sqrt{x}}.
+\end{align*}
+Vi har därför att
+\begin{align*}
+	\int \frac{\sin \sqrt{x}}{\sqrt{x}} \dd{x} = -2 \frac{\sin \sqrt{x}}{\sqrt{x}} + C.
+\end{align*}
+
+
+\subsection{5.6 9}%
+\label{sub:5_6_9}
+
+Evaluera
+\begin{align*}
+	\int \frac{\cos{x}}{4 + \sin^2{x}} \dd{x}.
+\end{align*}
+
+\paragraph{Lösning:}
+
+I Adams står det att
+\begin{align*}
+	\int \frac{1}{a^2 + x^2} \dd{x} = \frac{1}{a} \arctan \frac{x}{a} + C.
+\end{align*}
+
+Vi börjar med att göra variabelsubstitutionen $u = \sin x$.
+Eftersom $\dd{u} = \cos{x} \dd{x}$ har vi att
+\begin{align*}
+	\int \frac{\cos{x}}{4 + \sin^2{x}} \dd{x} ={}& \int \frac{1}{4 + u^2} \dd{u}\\
+	={}& \frac{1}{2} \arctan \frac{u}{2} + C\\
+	={}& \frac{1}{2} \arctan \frac{\sin x}{2} + C.
+\end{align*}
+
+
+\subsection{5.7 10}%
+\label{sub:5_7_10}
+
+Hitta arean som begränsas av kurvorna
+\begin{align*}
+	x ={}& y^2,\\
+	x ={}& 2 y^2 - y - 2.
+\end{align*}
+
+\paragraph{Lösning:}
+
+Kurvorna möts i $y = -1$ och $y = 2$.
+Alltså är den inneslutna arean
+\begin{align*}
+	\int_{-1}^{2} y^2 - (2 y^2 - y - 2) \dd{y} ={}& \int_{-1}^{2} -y^2 + y + 2 \dd{y}\\
+	={}& \frac{9}{2}.
+\end{align*}
+
+
+\subsection{6.1 2}%
+\label{sub:6_1_2}
+
+Beräkna
+\begin{align*}
+	\int (x + 3) \exp{2 x} \dd{x}.
+\end{align*}
+
+\paragraph{Lösning:}
+
+\begin{theorem}[partialintegrering]
+	Om $u$ och $v$ är två deriverbara funktioner av $x$ så gäller
+	\begin{align*}
+		\int u \derivative{v}{x} \dd{x} = u v - \int \derivative{u}{x} v \dd{x}.
+	\end{align*}
+\end{theorem}
+
+Låt $u = x + 3$ och $\derivative{v}{x} = \exp{2 x}$ ($v = \frac{1}{2} \exp{2 x}$).
+Då har vi att
+\begin{align*}
+	\int (x + 3) \exp{2 x} \dd{x} ={}& (x + 3) \frac{1}{2} \exp{2 x} - \int \frac{1}{2} \exp{2 x} \dd{x}\\
+	={}& \left((x + 3) \frac{1}{2} - \frac{1}{4}\right) \exp{2 x} + C.
+\end{align*}
+
+
+\subsection{6.1 7}%
+\label{sub:6_1_7}
+
+Beräkna
+\begin{align*}
+	\int \arctan x \dd{x}.
+\end{align*}
+
+\paragraph{Lösning:}
+
+Vi vill använda att
+\begin{align*}
+	\derivative{}{x} \arctan{x} = \frac{1}{1 + x^2}.
+\end{align*}
+Så låt $u = \arctan{x}$ och $\derivative{v}{x} = 1$ ($v = x$).
+Partiell integrering ger då att
+\begin{align*}
+	\int \arctan x \dd{x} ={}& x \arctan{x} - \int x \frac{1}{1 + x^2} \dd{x}\\
+	={}& x \arctan{x} - \frac{1}{2} \log{(1 + x^2)} + C.
+\end{align*}
+
