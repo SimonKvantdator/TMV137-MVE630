@@ -1,6 +1,6 @@
+%! TEX root = /home/simon/Documents/Anställning MV/TMV137/main.tex
 \section{Vecka 45}%
 \label{sec:vecka_45}
-% 6.5:   8, 19, 34, 35, 42a.
 
 
 \subsection{5.6 6}%
@@ -246,7 +246,8 @@ eller bevisa att den divergerar.
 Detta är en udda funktion integrerad över ett symmetriskt intervall, så integralen är $0$ om den existerar.
 Dock är
 \begin{align*}
-	\int_{0}^\infty \frac{x}{1 + x^2} \dd{x} ={}& \lim_{M \to \infty} [\frac{1}{2} \log{(1 + x^2)}]_0^\infty\\
+	\int_{0}^\infty \frac{x}{1 + x^2} \dd{x} ={}& \lim_{M \to \infty} [\frac{1}{2} \log{(1 + x^2)}]_0^M\\
+	={}& \lim_{M \to \infty} \frac{1}{2} \log{(1 + M^2)}\\
 	={}& \infty
 \end{align*}
 så integralen existerar inte.
