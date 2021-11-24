@@ -1,0 +1,238 @@
+%! TEX root = /home/simon/Documents/Anställning MV/TMV137/main.tex
+\section{Vecka 47}%
+\label{sec:vecka_47}
+% 3.7:   6, 15, 17.      18.6:   2, 8.
+%  9.1    21.    9.2   7, 21, 31.
+
+\subsection{3.7 6}%
+\label{sub:3_7_6}
+
+Hitta alla lösningar till
+\begin{align*}
+	y'' - 2 y' + y = 0.
+\end{align*}
+
+\paragraph{Lösning:}
+
+Vi har fall II (s.\ 207 i Adams), så den generella lösningen är på formen
+\begin{align*}
+	y = A \exp{r t} + B t \exp{r t}
+\end{align*}
+där $r$ är den dubbla roten till polynomet
+\begin{align*}
+	x^2 - 2 x + x = 0.
+\end{align*}
+Vi har att $r = 1$.
+
+
+\subsection{3.7 15}%
+\label{sub:3_7_15}
+
+Lös begynnelsevärdesproblemet
+\begin{align}
+	y'' + 4 y + 5 y ={}& 0,%
+	\label{eq:3_7_15_diffeq}\\
+	y(0) ={}& 2,%
+	\label{eq:3_7_15_boundcon1}\\
+	y'(0) ={}& 2.%
+	\label{eq:3_7_15_boundcon2}
+\end{align}
+
+\paragraph{Lösning:}
+
+Vi har nu fall III ($b^2 - 4 a c < 0$).
+Därför är den mest generella komplexa lösningen till \cref{eq:3_7_15_diffeq}
+\begin{align*}
+	y = A \exp{k t + i \omega t} + B \exp{k t - i \omega t}
+\end{align*}
+där $k = -b / (2 a) = -4 / 2 = -2$ och $\omega = \sqrt{4 a c - b^2} / (2 a) = \sqrt{4 \cdot 5 - 4^2} / 2 = 1$.
+Begynnelsevillkoren \cref{eq:3_7_15_boundcon1,eq:3_7_15_boundcon2} $\implies$
+\begin{align*}
+	A + B ={}& 2,\\
+	A (-2 + i) + B (-2 - i) ={}& 2.
+\end{align*}
+Vi får att
+\begin{align*}
+	B ={}& 2 - A,\\
+	A (-2 + i) + (2 - A) (-2 - i) ={}&\\
+	2 i A - 4 - 2 i ={}& 2\\
+	\implies&\\
+	A ={}& 1 - 3 i.\\
+\end{align*}
+Alltså är lösningen
+\begin{align*}
+	y ={}& (1 - 3 i) \exp{-2 t + i t} + (1 + 3 i) \exp{-2 t - i t}\\
+	={}& 2 \Re \left\{ \exp{-2 t + i t} \right\} + 2 \Im \left\{3 \exp{-2 t + i t} \right\}\\
+	={}& 2 \exp{-2 t} \cos{t} + 6 \exp{-2 t} \sin{t}
+\end{align*}
+Eftersom all koefficienter i diffekvationen och alla begynnelsevillkoren var rella är det betryggande att se att även lösningen är rell.
+
+
+\subsection{3.7 17}%
+\label{sub:3_7_17}
+
+Visa att om $a$, $b$, $c > 0$ i diffekvationen
+\begin{align*}
+	a y'' + b y' + c = 0
+\end{align*}
+så gäller $\lim_{t \to \infty} y(t) = 0$ för alla lösningar.
+
+\paragraph{Lösning:}
+
+Vi har då att alla rötter till den karaktäristiska ekvationen
+\begin{align*}
+	a r^2 + b r + c = 0
+\end{align*}
+är negativa.
+I fall I beskrivs den mest generella lösningen av
+\begin{align*}
+	y = A \exp{r_1 t} + B \exp{r_2 t} \overset{t \to \infty}{\longrightarrow} 0.
+\end{align*}
+I fall II beskrivs den mest generella lösningen av
+\begin{align*}
+	y = A \exp{r t} + B \exp{r t} \overset{t \to \infty}{\longrightarrow} 0.
+\end{align*}
+I fall III beskrivs den mest generella lösningen av
+\begin{align*}
+	y = A \exp{k t} \cos{\omega t} + B \exp{k t} \sin{\omega t},
+\end{align*}
+som också går mot noll när $t \to \infty$ eftersom $k = - b / (2 a) < 0$.
+
+
+\subsection{18.6 2}%
+\label{sub:18_6_2}
+
+Hitta den mest generella lösningen till
+\begin{align*}
+	y'' + y' - 2 y = x.
+\end{align*}
+
+\paragraph{Lösning:}
+
+Homogenlösningen ges av fall I:
+\begin{align*}
+	y = A \exp{r_1 t} + B \exp{r_2 t}
+\end{align*}
+där $r_1$ och $r_2$ är rötterna till $r^2 + r - 2 = 0$.
+
+En partikulärlösning är
+\begin{align}
+	y = -\frac{1}{2} x + \frac{1}{4}.
+\end{align}
+
+
+\subsection{18.6 8}%
+\label{sub:18_6_8}
+
+Hitta den mest generella lösningen till
+\begin{align*}
+	y'' + 4 y' + 4 y = \exp{-2 t}.
+\end{align*}
+
+\paragraph{Lösning:}
+
+Homogenlösningen ges av fall II:
+\begin{align*}
+	A \exp{r t} + B t \exp{r t}
+\end{align*}
+där $r$ är roten till $r^2 + 4 r + 4 = 0$.
+
+En partikulärlösning är
+\begin{align*}
+	y = \frac{1}{2} t^2 \exp{-2 t}.
+\end{align*}
+
+
+\subsection{9.1 21}%
+\label{sub:9_1_21}
+
+Beräkna gränsvärdet av
+\begin{align*}
+	\left( \frac{n - 3}{n} \right)^n.
+\end{align*}
+när $n \to \infty$.
+
+\paragraph{Lösning:}
+
+\begin{theorem}[sats 6 i avsnitt 3.4 i Adams]
+	\begin{align*}
+		\exp{x} = \lim_{n \to \infty} \left( 1 + \frac{x}{n} \right)^n.
+	\end{align*}
+\end{theorem}
+
+Vi har att
+\begin{align*}
+	\left( \frac{n - 3}{n} \right)^n ={}& \left( 1 + \frac{-3}{n} \right)^n,
+\end{align*}
+så gränsvärdet är $\exp{-3}$.
+
+
+\subsection{9.2 7}%
+\label{sub:9_2_7}
+
+Hitta gränsvärdet eller visa att serien divergerar:
+\begin{align*}
+	\sum_{k = 0}^\infty \frac{2^{k + 3}}{\exp{k - 3}}.
+\end{align*}
+
+\paragraph{Lösning:}
+
+\begin{align*}
+	\sum_{k = 0}^\infty \frac{2^{k + 3}}{\exp{k - 3}} ={}& \sum_{k = 0}^\infty \exp{\log{2} (k + 3) - (k - 3)}\\
+	={}& \exp{3 (\log{2} + 1)} \sum_{k = 0}^\infty \left( \exp{\log{2} - 1} \right)^k\\
+	={}& (2 \exp{})^3 \sum_{k = 0}^\infty \left( 2 / \exp{} \right)^k\\
+	={}& (2 \exp{})^3 \frac{1}{1 - 2 / \exp{}}\\
+	={}& \frac{8 \exp{4}}{\exp{} - 2}\\
+\end{align*}
+
+
+\subsection{9.2 21}%
+\label{sub:9_2_21}
+
+En studsboll tappar $3/4$ av sin höjd varje studs.
+Om den släpps från höjden $a$ och låts studsa i all oändlighet, vad är gränsvärdet av sträckan som bollen färdas genom luften?
+
+\paragraph{Lösning:}
+
+\begin{align*}
+	\sum_{k = 0}^\infty a \left( \frac{3}{4} \right)^k ={}& \frac{a}{1 - \frac{3}{4}}\\
+	={}& 4 a.
+\end{align*}
+
+
+\subsection{9.2 31}%
+\label{sub:9_2_31}
+
+Visa att påståendet är sant eller ge ett motexempel:
+\begin{quote}
+	$a_n > 0$ för alla $n$ och $\sum_n a_n$ konvergent $\implies$ $\sum_n (a_n)^2$ konvergent.
+\end{quote}
+
+
+\paragraph{Lösning:}
+
+Låt $a = \max_n a_n$.
+\begin{lemma}
+	$a$ är väldefinerat.
+\end{lemma}
+\begin{proof}
+	$\lim_{n \to \infty} a_n = 0$ enligt sats 4 från avsnitt 9.2, så för något $N$ är $a_n < a_0$ för alla $n > N$.
+	Alltså har mängden $\set{a_0, \dots}$ ett max omm delmängden $\set{a_0, \dots, a_N}$ har ett max, men detta är en ändlig mängd så den har uppenbarligen ett max.
+\end{proof}
+
+Vi har då att
+\begin{align}
+	\sum_n (a_n)^2 ={}& a^2 \sum_n \left( \frac{a_n}{a} \right)^n\\
+	\leq{}& a^2 \sum_n \left( \frac{a_n}{a} \right)\\
+	\leq{}& a \sum_n a_n
+\end{align}
+som vi vet konvergerar :).
+
+
+
+
+
+
+
+
+
